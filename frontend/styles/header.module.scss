@@ -1,0 +1,53 @@
+@use './partials/mixins';
+@use './partials/queries';
+
+.container {
+  min-height: 100px;
+  background-color: palevioletred;
+  @include mixins.flexBetween;
+  padding: 0rem 1rem;
+}
+
+.logo {
+  font-size: 3rem;
+  color: black;
+}
+
+.menu {
+  display: none;
+  font-size: 2rem;
+
+  @include queries.mobile {
+    display: inline-flex;
+  }
+}
+
+.nav {
+  @include queries.mobile {
+    ul {
+      // display: none;
+    }
+
+    li {
+      padding-bottom: 2rem;
+      &:first-of-type {
+        padding-top: 1rem;
+      }
+    }
+  }
+
+  li {
+    display: inline-flex;
+  }
+}
+
+.menu_open {
+  @include mixins.flexCenter;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background-color: pale;
+}

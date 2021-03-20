@@ -1,0 +1,28 @@
+$mobile: 360px;
+$smallScreen: 800px;
+$desktop: 1200px;
+$bigScreen: 1824px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin smallScreen {
+  @media (max-width: #{$smallScreen}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin bigScreen {
+  @media (max-width: #{$bigScreen}) {
+    @content;
+  }
+}
